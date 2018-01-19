@@ -1,0 +1,136 @@
+@font-face {
+    font-family: 'Joti';
+    src: url('fonts/JotiOne-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'jose';
+    src: url('fonts/JosefinSans-Regular.ttf');
+}
+@font-face {
+    font-family: 'jose-bold';
+    src: url('fonts/JosefinSans-Bold.ttf');
+}
+
+* {
+    margin:0;
+    padding:0;
+}
+
+#background {
+    background: url('../images/background.jpg');
+    width:100%;
+    height:100%;
+    position: absolute;
+    top:0;
+    right:0;
+}
+#time {
+    font-family: 'jose-bold';
+    color: cyan;
+    font-size: 3vw;
+}
+#place {
+    font-family: 'jose-bold';
+    color: white;
+    font-size: 1.4vw;
+}
+#wrapper{
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 0.8;
+}
+
+.navbar {
+    margin-bottom:0; 
+}
+.event-name .btn {
+    width:10vw;
+    font-size: 1vw;
+}
+
+.event-container{
+    height:90vh;
+}
+.containerRow {
+    height:100%;
+}
+.event-name{
+    height:72%;
+}
+.countdown  {
+    height:28%;
+}
+.containerRow h1{
+    color: white;
+    font-size: 3vw;
+    font-family: 'Joti';
+    line-height: 1.4;
+}
+
+#countdown #tiles{
+	position: relative;
+	z-index: 1;
+}
+#countdown {
+    text-align: center;
+}
+
+#label {
+    margin-top:40px;
+    color:white;
+    font-family: 'jose'
+}
+#countdown .labels{
+	width: 100%;
+	height: 25px;
+	text-align: center;
+	position: absolute;
+} 
+#countdown #tiles > span{
+	width: 92px;
+	max-width: 92px;
+	font: bold 48px 'Droid Sans', Arial, sans-serif;
+	text-align: center;
+	color: #111;
+	background-color: #ddd;
+	background-image: -webkit-linear-gradient(top, #bbb, #eee); 
+	background-image:    -moz-linear-gradient(top, #bbb, #eee);
+	background-image:     -ms-linear-gradient(top, #bbb, #eee);
+	background-image:      -o-linear-gradient(top, #bbb, #eee);
+	border-top: 1px solid #fff;
+	border-radius: 3px;
+	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.7);
+	margin: 0 7px;
+	padding: 18px 0;
+	display: inline-block;
+	position: relative;
+}
+#countdown .labels{
+	width: 100%;
+	height: 25px;
+	text-align: center;
+	position: absolute;
+}
+
+#countdown .labels li{
+    width: 92px;
+	font: bold 15px 'Droid Sans', Arial, sans-serif;
+	color: #f47321;
+	text-shadow: 1px 1px 0px #000;
+	text-align: center;
+    text-transform: uppercase;
+    margin:0;
+    padding: 0;
+	display: inline-block;
+}
+#event-comment {
+    font-family: 'jose-bold';
+    color:white;
+    font-size:1.4vw;
+}
+.event-logo img {
+    margin-left:10vh;
+    margin-top:20%;
+}

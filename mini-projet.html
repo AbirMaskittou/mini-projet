@@ -1,0 +1,178 @@
+﻿<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>page d'aceuil</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/jquery.fullPage.css">
+  <link rel="stylesheet" href="styles/style.css">
+<script src="scripts/jquery.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="scripts/fullPage.js"></script>
+<script src="scripts/jquery.fullPage.min.js"></script>
+</head>
+<body>
+    <div id="fullpage">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <img src="images/acm logo.png" width="40" heigt="40" alt="">
+                </div>
+                <ul class="nav navbar-nav pull-right">
+                    <li onclick="moveIt()" class="active"><a href="#">Overview</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Team</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Register Now</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="section">
+            <div id="background">
+                <div id="wrapper"></div>
+            </div>
+            <!-- navbar-fixed-top when scrolling -->
+            <div class="container-fluid event-container">
+                <div class="containerRow row">
+                    <div class="event-logo col-xs-6 col-md-6">
+                        <img src="images/mcpc.png" width="80%" alt="Alternate Text" />
+                    </div>
+                    <div class="col-md-6 col-xs-6">
+                        <div class="row event-name">
+                            <div id="label"> Prepare for</div>
+                            <h1>Moroccan Collegiate Programming Contest</h1>
+                            <div id="time-place">
+                                <div id="time">2018</div>
+                                <div id="place">Azilal - April 24th</div><br>
+                            </div>
+                            <div class="btn btn-success">More Info</div> &nbsp;&nbsp;&nbsp;
+                            <div class="btn btn-success">Register Now!</div>
+                        </div>
+                        <div class="row countdown">
+                            <div id="event-comment">The event will start in :</div><br>
+                            <div id="countdown">
+                                <div id='tiles'></div>
+                                <div class="labels">
+                                    <li>Days</li>
+                                    <li>Hours</li>
+                                    <li>Mins</li>
+                                    <li>Secs</li>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div id="background">
+                <div id="wrapper"></div>
+            </div>
+            <!-- navbar-fixed-top when scrolling -->
+            <div class="container-fluid event-container">
+                <div id="abir2" class="containerRow row">
+                    <div class="event-logo col-xs-6 col-md-6">
+                    </div>
+                    <div class="col-md-6 col-xs-6">
+                        <div class="row event-name">
+                            <div id="label"> Prepare for</div>
+                            <h1>Moroccan Collegiate Programming Contest</h1>
+                            <div id="time-place">
+                                <div id="time">2018</div>
+                                <div id="place">Azilal - April 24th</div><br>
+                            </div>
+                            <div class="btn btn-success">More Info</div> &nbsp;&nbsp;&nbsp;
+                            <div class="btn btn-success">Register Now!</div>
+                        </div>
+                        <div class="row countdown">
+                            <div id="event-comment">The event will start in :</div><br>
+                            <div id="countdown">
+                                <div id='tiles'></div>
+                                <div class="labels">
+                                    <li>Days</li>
+                                    <li>Hours</li>
+                                    <li>Mins</li>
+                                    <li>Secs</li>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div id="background">
+                <div id="wrapper"></div>
+            </div>
+            <!-- navbar-fixed-top when scrolling -->
+            <div class="container-fluid event-container">
+                <div class="containerRow row">
+                    <div class="event-logo col-xs-6 col-md-6">
+                    </div>
+                    <div class="col-md-6 col-xs-6">
+                        <div class="row event-name">
+                            <div id="label"> Prepare for</div>
+                            <h1>Moroccan Collegiate Programming Contest</h1>
+                            <div id="time-place">
+                                <div id="time">2018</div>
+                                <div id="place">Azilal - April 24th</div><br>
+                            </div>
+                            <div class="btn btn-success">More Info</div> &nbsp;&nbsp;&nbsp;
+                            <div class="btn btn-success">Register Now!</div>
+                        </div>
+                        <div class="row countdown">
+                            <div id="event-comment">The event will start in :</div><br>
+                            <div id="countdown">
+                                <div id='tiles'></div>
+                                <div class="labels">
+                                    <li>Days</li>
+                                    <li>Hours</li>
+                                    <li>Mins</li>
+                                    <li>Secs</li>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+</body>
+</html>
+<script>
+  var target_date = new Date().getTime() + (1000*3600*48); // set the countdown date
+var days, hours, minutes, seconds; // variables for time units
+
+var countdown = document.getElementById("tiles"); // get tag element
+
+getCountdown();
+
+setInterval(function () { getCountdown(); }, 1000);
+
+function getCountdown(){
+
+	// find the amount of "seconds" between now and target
+	var current_date = new Date().getTime();
+	var seconds_left = (target_date - current_date) / 1000;
+
+	days = pad( parseInt(seconds_left / 86400) );
+	seconds_left = seconds_left % 86400;
+		 
+	hours = pad( parseInt(seconds_left / 3600) );
+	seconds_left = seconds_left % 3600;
+		  
+	minutes = pad( parseInt(seconds_left / 60) );
+	seconds = pad( parseInt( seconds_left % 60 ) );
+
+	// format countdown string + set tag value
+	countdown.innerHTML = "<span>" + days + "</span><span>" + hours + "</span><span>" + minutes + "</span><span>" + seconds + "</span>"; 
+}
+
+function pad(n) {
+	return (n < 10 ? '0' : '') + n;
+}
+
+
+</script>
