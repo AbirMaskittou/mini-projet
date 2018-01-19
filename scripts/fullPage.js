@@ -1,9 +1,10 @@
 $(document).ready(function() {
     $('#fullpage').fullpage({
-      navigation: true,
-	});
-	$("#abir").click(function() {
-		
+        lockAnchors: false,
+        menu: '#menu',
+        navigation: true,
+        navigationPosition: 'right',
+        navigationTooltips: ['Review', 'Event\'s page', 'Wallpaper','about us'],
 	});
 });
 function moveIt() {

@@ -1,0 +1,32 @@
+﻿.container-fluid {
+    height:100%;
+}
+.desc-col {
+    padding-top:2vh;
+    height: 100%;
+}
+#description-title {
+    text-align:center;
+}
+.event-desc, .desc-logo {
+    height:50%;
+}
+
+.event-desc p {
+    margin: 20px;
+    margin-top: 40px;
+}
+.faq-col {
+    padding-top: 2vh;
+    height: 100%;
+}
+.logo-company,.faq {
+    height: 50%;
+}
+.logo-company img {
+    margin:auto;
+    margin-top:4vh;
+}
+.faq {
+    font-size:15px;
+}
